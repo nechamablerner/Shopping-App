@@ -20,7 +20,7 @@ export function HomePage(){
         <main className={styles.container}>
             {products.map((product) => (
             <div key={product.id} className={styles.item}>
-            <img src={`/images/${product.image}`} alt={product.name} className={styles.productImage} />
+            <img src={`images/${product.image}`} alt={product.name} className={styles.productImage} />
             
             <div className={styles.text}>
                 <h3 className={styles.itemName}>{product.name}</h3>
