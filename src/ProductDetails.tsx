@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { products } from "./products";
 import { useEffect, useState } from "react";
+import styles from './Product.module.css';
 
 function ProductDetails(){
     const {id} = useParams();
@@ -17,22 +18,21 @@ function ProductDetails(){
     
     return (
         <>
-        <header>
-            {/* <NavigationBar/> */}
-        </header>
-        <main>
-            <h2> {product?.name}</h2>
-            <img src={`/images/${product.image}`} alt={product.name} />
+        <main className={styles.container}>
+            <div className={styles.imageSelection}>
+                <img src={`/images/${product.image}`} alt={product.name} className={styles.img} />
+            </div>
 
-            <h6>Price: {product?.price}</h6>
-            <h6>Descriptions: {product?.description}</h6>
+            <div className={styles.infoSection}>
+                <h1 className={styles.productTitle}> {product?.name}</h1>
 
-
+                <p className={styles.price}> ${product?.price}</p>
+                <p className={styles.description}> {product?.description}</p>
+            </div>
         </main>
         </>
     );
 }
 export default ProductDetails;
 
-// add image
-// add dimensions 
+

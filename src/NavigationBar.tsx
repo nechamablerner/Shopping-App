@@ -1,11 +1,16 @@
 import  { NavLink} from 'react-router-dom';
+import styles from './NavBar.module.css';
 
 
 export function NavigationBar(){
     return(
         <>
-        <nav>
-        <NavLink to="/">Home</NavLink>
+        <nav className={styles.nav}>
+            <ul>
+                <li>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+            </ul>
       </nav>
         </>
     );
@@ -14,4 +19,3 @@ export function NavigationBar(){
 export default NavigationBar;
 
 
-// use NavLink ??

@@ -2,6 +2,7 @@ import { products } from "../products";
 import { useNavigate } from "react-router-dom";
 import styles from '../ProductList.module.css';
 import NavigationBar from "../NavigationBar";
+import headerStyles from '../Header.module.css';
 
 export function HomePage(){
     const navigateTo = useNavigate();
@@ -11,18 +12,25 @@ export function HomePage(){
 
     return (
         <>
-        <header>
+        <header className={headerStyles.header}>
             <NavigationBar/>
             <h2>Shopping App</h2>
         </header>
-        <main>
+
+        <main className={styles.container}>
             {products.map((product) => (
-            <div key={product.id} className="product-card">
-            <button key={product.id} onClick={() => navigateToPage(product.id)}>{product.name +  product.price + product.image } </button>
+            <div key={product.id} className={styles.item}>
             <img src={`/images/${product.image}`} alt={product.name} className={styles.productImage} />
+            
+            <div className={styles.text}>
+                <h3 className={styles.itemName}>{product.name}</h3>
+                <p className={styles.itemPrice}>${product.price}</p>
+            </div>
+            <button  className={styles.button}
+                onClick ={() => navigateToPage(product.id)}> Veiw Details
+            </button>
             </div>
             ))}
-            
         </main>
         </>
     );

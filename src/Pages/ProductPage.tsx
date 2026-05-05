@@ -1,14 +1,16 @@
 
 import ProductDetails from "../ProductDetails";
 import NavigationBar from "../NavigationBar";
+import headerStyles from '../Header.module.css';
+
 
 export function ProductPage(){
 
     return (
         <>
-        <header>
+        <header className={headerStyles.header}>
             <NavigationBar/>
-            <h2> Product:</h2>
+            <h2> Shopping App</h2>
             
         </header>
         <main> 
