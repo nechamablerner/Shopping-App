@@ -27,7 +27,7 @@ export function HomePage(){
                 <p className={styles.itemPrice}>${product.price}</p>
             </div>
             <button  className={styles.button}
-                onClick ={() => navigateToPage(product.id)}> Veiw Details
+                onClick ={() => navigateToPage(product.id)}> View Details
             </button>
             </div>
             ))}

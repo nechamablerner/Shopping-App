@@ -6,6 +6,7 @@ import { Footer } from './Footer';
 function App() {  
   return (
     <>
+     
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/products/:id" element={<ProductPage/>}/>
