@@ -20,7 +20,7 @@ function ProductDetails(){
         <>
         <main className={styles.container}>
             <div className={styles.imageSelection}>
-                <img src={`/images/${product.image}`} alt={product.name} className={styles.img} />
+                <img src={`images/${product.image}`} alt={product.name} className={styles.img} />
             </div>
 
             <div className={styles.infoSection}>
